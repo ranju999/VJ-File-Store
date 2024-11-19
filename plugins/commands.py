@@ -485,7 +485,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         file_id = query.data.split('#', 1)[1]
         #STREAM_LINK = await db.get_stream_link()
         AKS = await client.send_cached_media(
-            chat_id=LOG_CHANNEL,
+            chat_id=BIN_CHANNEL,
             file_id=file_id)
         online = f"{AMAN}/watch/{AKS.id}?hash={get_hash(AKS)}"
         download = f"{AMAN}/{AKS.id}?hash={get_hash(AKS)}"
